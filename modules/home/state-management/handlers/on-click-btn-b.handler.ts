@@ -1,4 +1,4 @@
-import { HomeState } from "../../types/home-state.interface";
+import { HomeState } from "../types/home-state.interface";
 
 export const onClickBtnBHandler = (state: HomeState): HomeState => {
   const { b } = state;

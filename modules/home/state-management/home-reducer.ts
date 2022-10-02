@@ -1,8 +1,8 @@
 import { onEnterHandler } from './handlers/on-enter.handler';
 import { onClickBtnAHandler } from './handlers/on-click-btn-a.handler';
-import { HomeAction } from '../types/home-action.type';
-import { HomeState } from "../types/home-state.interface";
 import { onClickBtnBHandler } from './handlers/on-click-btn-b.handler';
+import { HomeState } from './types/home-state.interface';
+import { HomeAction } from './types/home-action.type';
 
 export const homeReducer = (state: HomeState, action: HomeAction): HomeState => {
   switch(action.type) {
