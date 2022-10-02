@@ -6,19 +6,24 @@ import { homeInitialState } from './state/home-initial-state';
 import { useEnter } from '../../libs/react-hooks/use-enter/use-enter';
 
 const HomeModule: NextPage = () => {
+  // constant
+
+  // use state
   const [state, dispatch] = useReducer(homeReducer, homeInitialState)
   const {a, b} = state;
 
-  useEnter(() => dispatch({ type: 'ON_ENTER' }));
-
+  // events
+  useEnter(() => { dispatch({ type: 'ON_ENTER' }) });
   const onClickBtnA: MouseEventHandler<HTMLButtonElement> = (e) => {
     dispatch({type: 'ON_CLICK_BTN_A', data: { plus: 3 }})
   }
   const onClickBtnB: MouseEventHandler<HTMLButtonElement> = (e) => {
     dispatch({type: 'ON_CLICK_BTN_B'})
   }
+  // styles
 
-return <>
+  // template
+  return <>
     <h1>Let's test rendering</h1>
     <BoardRowsRounded>
       <BoardRowsRounded.Row number={a} text={'a'} btnAttr={{
