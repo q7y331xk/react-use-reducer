@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import { MouseEventHandler, useReducer } from 'react';
 import { BoardRowsRounded } from '../../components/organisms/board/board-rows-rounded/board-rows-rounded';
-import { homeReducer } from './state/home-reducer';
-import { homeInitialState } from './state/home-initial-state';
+import { homeReducer } from './state-management/home-reducer';
+import { homeInitialState } from './state-management/home-initial-state';
 import { useEnter } from '../../libs/react-hooks/use-enter/use-enter';
 
 const HomeModule: NextPage = () => {
